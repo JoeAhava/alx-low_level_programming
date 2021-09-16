@@ -1,22 +1,27 @@
 #include "lists.h"
-
 /**
- * get_dnodeint_at_index - returns data of nth node
- * @head: head of node
- * @index: index wanted
- * Return: data of nth node
- */
+* get_dnodeint_at_index - deletes the head node
+* @head: address new head
+* @index: nth element;
+* Return: head node’s data (n).
+*/
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	size_t count = 0;
+	dlistint_t *aux;
+	unsigned int n = 0;
 
-	while (head != NULL)
+	aux = head;
+	while (n < index)
 	{
-		if (count == index)
-			break;
-		count++;
-		head = head->next;
+		if (aux)
+		{
+			aux = aux->next;
+			n++;
+		}
+		else
+		{
+		return (NULL);
+		}
 	}
-
-	return (head);
+	return (aux);
 }
