@@ -1,0 +1,7 @@
+3-hash_table_set.c:	val = strdup(value);
+6-main.c:    key = strdup("Tim");
+6-main.c:    value = strdup("Britton");
+Binary file d matches
+Binary file e matches
+Binary file f matches
+Binary file g matches
